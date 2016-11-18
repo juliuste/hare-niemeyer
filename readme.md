@@ -70,6 +70,11 @@ In this case, the `parliament` variable looks like this:
 }
 ```
 
+## Similar Projects
+
+- [sainte-lague](https://github.com/juliuste/sainte-lague) - Sainte-Laguë / Webster / Schepers method
+- [DHondt](https://github.com/economia/DHondt) – D'Hondt method
+
 ## Contributing
 
 If you found a bug, want to propose a feature or feel the urge to complain about your life, feel free to visit [the issues page](https://github.com/juliuste/hare-niemeyer/issues).
