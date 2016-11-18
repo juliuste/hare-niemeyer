@@ -1,0 +1,42 @@
+{
+  "name": "hare-niemeyer",
+  "description": "Hare-Niemeyer aka. Hamilton or largest remainder method for seat distribution used in multiple parliamentary elections all over the world",
+  "version": "0.1.0",
+  "keywords": [
+    "hare-niemeyer",
+    "hare",
+    "niemeyer",
+    "hamilton",
+    "largest",
+    "remainder",
+    "seats",
+    "votes",
+    "voting",
+    "election",
+    "proportional",
+    "representation",
+    "distribution"
+  ],
+  "author": "Julius Tens <mail@juliustens.de>",
+  "homepage": "https://github.com/juliuste/hare-niemeyer",
+  "repository": "juliuste/hare-niemeyer",
+  "bugs": "https://github.com/juliuste/hare-niemeyer/issues",
+  "main": "./index.js",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "deep-eql": "^2.0.1",
+    "round-to": "^1.1.0",
+    "shuffle-array": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js",
+    "prepublish": "npm test"
+  },
+  "engine": {
+    "node": ">=4"
+  },
+  "license": "MIT"
+}
