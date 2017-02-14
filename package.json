@@ -1,7 +1,7 @@
 {
   "name": "hare-niemeyer",
   "description": "Hare-Niemeyer aka. Hamilton or largest remainder method for seat distribution used in multiple parliamentary elections all over the world",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "keywords": [
     "hare-niemeyer",
     "hare",
