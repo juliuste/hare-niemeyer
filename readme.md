@@ -1,5 +1,7 @@
 # hare-niemeyer
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/juliuste/hare-niemeyer.svg)](https://greenkeeper.io/)
+
 An implementation of the **[Hare-Niemeyer](https://en.wikipedia.org/wiki/Largest_remainder_method)** (also known as **Hamilton** or **largest remainder**) method. Parliament seat allocation algorithm used in multiple countries around the world.
 
 *Attention: Since some countries use a modification of the algorithm instead of this vanilla version, you should check your country's electoral legislature. Furthermore, I don't take any responsibility for the accuracy of the calculated numbers, even though I'm pretty confident with my implementation.*
