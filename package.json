@@ -28,7 +28,7 @@
     "dist"
   ],
   "dependencies": {
-    "deep-eql": "^2.0.1",
+    "deep-eql": "^3.0.0",
     "round-to": "^2.0.0",
     "shuffle-array": "^1.0.0"
   },
