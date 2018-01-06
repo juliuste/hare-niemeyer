@@ -39,7 +39,7 @@
   "scripts": {
     "test": "node test.js",
     "transpile": "babel index.js --presets babel-preset-es2015 --out-dir dist",
-    "prepublish": "npm test && npm run transpile"
+    "prepare": "npm test && npm run transpile"
   },
   "engine": {
     "node": ">=4"
