@@ -6,9 +6,11 @@ An implementation of the **[Hare-Niemeyer](https://en.wikipedia.org/wiki/Largest
 
 [![npm version](https://img.shields.io/npm/v/hare-niemeyer.svg)](https://www.npmjs.com/package/hare-niemeyer)
 [![Build Status](https://travis-ci.org/juliuste/hare-niemeyer.svg?branch=master)](https://travis-ci.org/juliuste/hare-niemeyer)
+[![Greenkeeper badge](https://badges.greenkeeper.io/juliuste/hare-niemeyer.svg)](https://greenkeeper.io/)
 [![dependency status](https://img.shields.io/david/juliuste/hare-niemeyer.svg)](https://david-dm.org/juliuste/hare-niemeyer)
 [![dev dependency status](https://img.shields.io/david/dev/juliuste/hare-niemeyer.svg)](https://david-dm.org/juliuste/hare-niemeyer#info=devDependencies)
 [![license](https://img.shields.io/github/license/juliuste/hare-niemeyer.svg?style=flat)](LICENSE)
+[![chat on gitter](https://badges.gitter.im/juliuste.svg)](https://gitter.im/juliuste)
 
 ## Installation
 
