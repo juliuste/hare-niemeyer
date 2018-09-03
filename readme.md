@@ -14,7 +14,7 @@ An implementation of the **[Hare-Niemeyer](https://en.wikipedia.org/wiki/Largest
 ## Installation
 
 ```shell
-npm install --save hare-niemeyer
+npm install hare-niemeyer
 ```
 
 ## Usage
