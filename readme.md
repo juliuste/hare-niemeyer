@@ -8,7 +8,6 @@ An implementation of the **[Hare-Niemeyer](https://en.wikipedia.org/wiki/Largest
 [![Build Status](https://travis-ci.org/juliuste/hare-niemeyer.svg?branch=master)](https://travis-ci.org/juliuste/hare-niemeyer)
 [![Greenkeeper badge](https://badges.greenkeeper.io/juliuste/hare-niemeyer.svg)](https://greenkeeper.io/)
 [![dependency status](https://img.shields.io/david/juliuste/hare-niemeyer.svg)](https://david-dm.org/juliuste/hare-niemeyer)
-[![dev dependency status](https://img.shields.io/david/dev/juliuste/hare-niemeyer.svg)](https://david-dm.org/juliuste/hare-niemeyer#info=devDependencies)
 [![license](https://img.shields.io/github/license/juliuste/hare-niemeyer.svg?style=flat)](LICENSE)
 [![chat on gitter](https://badges.gitter.im/juliuste.svg)](https://gitter.im/juliuste)
 
@@ -79,4 +78,4 @@ In this case, the `parliament` variable looks like this:
 
 ## Contributing
 
-If you found a bug, want to propose a feature or feel the urge to complain about your life, feel free to visit [the issues page](https://github.com/juliuste/hare-niemeyer/issues).
+If you found a bug or want to propose a feature, feel free to visit [the issues page](https://github.com/juliuste/hare-niemeyer/issues).
