@@ -1,32 +1,42 @@
 {
     "name": "hare-niemeyer",
-    "description": "Hare-Niemeyer aka. Hamilton or largest remainder method for seat distribution used in multiple parliamentary elections all over the world",
     "version": "2.0.0",
+    "description": "Hare-Niemeyer aka. Hamilton or largest remainder method for seat distribution used in multiple parliamentary elections all over the world",
     "keywords": [
-        "hare-niemeyer",
-        "hare",
-        "niemeyer",
+        "distribution",
+        "election",
         "hamilton",
+        "hare",
+        "hare-niemeyer",
         "largest",
+        "niemeyer",
+        "proportional",
         "remainder",
+        "representation",
         "seats",
         "votes",
-        "voting",
-        "election",
-        "proportional",
-        "representation",
-        "distribution"
+        "voting"
     ],
-    "author": "Julius Tens <mail@juliustens.eu>",
     "homepage": "https://github.com/juliuste/hare-niemeyer",
-    "repository": "juliuste/hare-niemeyer",
     "bugs": "https://github.com/juliuste/hare-niemeyer/issues",
-    "main": "./dist/index.js",
-    "module": "./index.js",
+    "repository": "juliuste/hare-niemeyer",
+    "license": "ISC",
+    "author": "Julius Tens <mail@juliustens.eu>",
     "files": [
         "index.js",
         "dist"
     ],
+    "main": "./dist/index.js",
+    "module": "./index.js",
+    "scripts": {
+        "check-deps": "depcheck --ignores='babel-cli,babel-preset-es2015'",
+        "fix": "eslint --fix index.js test.js",
+        "lint": "eslint index.js test.js",
+        "prepare": "npm run transpile",
+        "prepublishOnly": "npm test",
+        "test": "npm run lint && npm run check-deps && npm run transpile && node test",
+        "transpile": "babel index.js --presets babel-preset-es2015 --out-dir dist"
+    },
     "dependencies": {
         "deep-eql": "^4.0.0",
         "round-to": "^3.0.0",
@@ -34,16 +44,16 @@
     },
     "devDependencies": {
         "babel-cli": "^6.26.0",
-        "babel-preset-es2015": "^6.24.1"
+        "babel-preset-es2015": "^6.24.1",
+        "depcheck": "^0.8.0",
+        "eslint": "^5.16.0",
+        "eslint-config-standard": "^12.0.0",
+        "eslint-plugin-import": "^2.17.2",
+        "eslint-plugin-node": "^9.0.1",
+        "eslint-plugin-promise": "^4.1.1",
+        "eslint-plugin-standard": "^4.0.0"
     },
-    "scripts": {
-        "test": "node test.js",
-        "transpile": "babel index.js --presets babel-preset-es2015 --out-dir dist",
-        "prepare": "npm run transpile",
-        "prepublishOnly": "npm test"
-    },
-    "engine": {
-        "node": ">=6"
-    },
-    "license": "ISC"
+    "engines": {
+        "node": ">=8"
+    }
 }
