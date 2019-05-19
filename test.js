@@ -5,8 +5,8 @@ const hn = require('./index')
 const eql = require('deep-eql')
 
 const isIn = (obj, array) => {
-	for(let o of array){
-		if(eql(o, obj)) return true
+	for (let o of array) {
+		if (eql(o, obj)) return true
 	}
 	return false
 }
