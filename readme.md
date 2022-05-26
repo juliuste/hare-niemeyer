@@ -5,11 +5,8 @@ An implementation of the **[Hare-Niemeyer](https://en.wikipedia.org/wiki/Largest
 *Attention: Since some countries use a modification of the algorithm instead of this vanilla version, you should check your country's electoral legislature. Furthermore, I don't take any responsibility for the accuracy of the calculated numbers, even though I'm pretty confident with my implementation.*
 
 [![npm version](https://img.shields.io/npm/v/hare-niemeyer.svg)](https://www.npmjs.com/package/hare-niemeyer)
-[![Build Status](https://travis-ci.org/juliuste/hare-niemeyer.svg?branch=master)](https://travis-ci.org/juliuste/hare-niemeyer)
-[![Greenkeeper badge](https://badges.greenkeeper.io/juliuste/hare-niemeyer.svg)](https://greenkeeper.io/)
-[![dependency status](https://img.shields.io/david/juliuste/hare-niemeyer.svg)](https://david-dm.org/juliuste/hare-niemeyer)
-[![license](https://img.shields.io/github/license/juliuste/hare-niemeyer.svg?style=flat)](LICENSE)
-[![chat on gitter](https://badges.gitter.im/juliuste.svg)](https://gitter.im/juliuste)
+[![License](https://img.shields.io/github/license/juliuste/hare-niemeyer.svg?style=flat)](license)
+[![Contact me](https://img.shields.io/badge/contact-email-turquoise)](mailto:mail@juliustens.eu)
 
 ## Installation
 
@@ -19,8 +16,10 @@ npm install hare-niemeyer
 
 ## Usage
 
+**This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).**
+
 ```js
-const hareNiemeyer = require('hare-niemeyer')
+import hareNiemeyer from 'hare-niemeyer'
 
 const electionResults = { // number of votes per party
 	socialists: 130755,

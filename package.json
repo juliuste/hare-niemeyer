@@ -1,59 +1,53 @@
 {
-    "name": "hare-niemeyer",
-    "version": "2.0.0",
-    "description": "Hare-Niemeyer aka. Hamilton or largest remainder method for seat distribution used in multiple parliamentary elections all over the world",
-    "keywords": [
-        "distribution",
-        "election",
-        "hamilton",
-        "hare",
-        "hare-niemeyer",
-        "largest",
-        "niemeyer",
-        "proportional",
-        "remainder",
-        "representation",
-        "seats",
-        "votes",
-        "voting"
-    ],
-    "homepage": "https://github.com/juliuste/hare-niemeyer",
-    "bugs": "https://github.com/juliuste/hare-niemeyer/issues",
-    "repository": "juliuste/hare-niemeyer",
-    "license": "ISC",
-    "author": "Julius Tens <mail@juliustens.eu>",
-    "files": [
-        "index.js",
-        "dist"
-    ],
-    "main": "./dist/index.js",
-    "module": "./index.js",
-    "scripts": {
-        "check-deps": "depcheck --ignores='babel-cli,babel-preset-es2015'",
-        "fix": "eslint --fix index.js test.js",
-        "lint": "eslint index.js test.js",
-        "prepare": "npm run transpile",
-        "prepublishOnly": "npm test",
-        "test": "npm run lint && npm run check-deps && npm run transpile && node test",
-        "transpile": "babel index.js --presets babel-preset-es2015 --out-dir dist"
-    },
-    "dependencies": {
-        "deep-eql": "^4.0.0",
-        "round-to": "^3.0.0",
-        "shuffle-array": "^1.0.1"
-    },
-    "devDependencies": {
-        "babel-cli": "^6.26.0",
-        "babel-preset-es2015": "^6.24.1",
-        "depcheck": "^0.8.0",
-        "eslint": "^5.16.0",
-        "eslint-config-standard": "^12.0.0",
-        "eslint-plugin-import": "^2.17.2",
-        "eslint-plugin-node": "^9.0.1",
-        "eslint-plugin-promise": "^4.1.1",
-        "eslint-plugin-standard": "^4.0.0"
-    },
-    "engines": {
-        "node": ">=8"
-    }
+	"name": "hare-niemeyer",
+	"version": "2.0.0",
+	"description": "Hare-Niemeyer aka. Hamilton or largest remainder method for seat distribution used in multiple parliamentary elections all over the world",
+	"keywords": [
+		"distribution",
+		"election",
+		"hamilton",
+		"hare",
+		"hare-niemeyer",
+		"largest",
+		"niemeyer",
+		"proportional",
+		"remainder",
+		"representation",
+		"seats",
+		"votes",
+		"voting"
+	],
+	"homepage": "https://github.com/juliuste/hare-niemeyer",
+	"bugs": "https://github.com/juliuste/hare-niemeyer/issues",
+	"repository": "juliuste/hare-niemeyer",
+	"license": "ISC",
+	"author": "Julius Tens <mail@juliustens.eu>",
+	"main": "src/index.js",
+	"files": [
+		"src/*",
+		"!src/*.test.js"
+	],
+	"type": "module",
+	"scripts": {
+		"check-deps": "depcheck",
+		"fix": "npm run lint -- --fix",
+		"lint": "eslint src",
+		"prepublishOnly": "npm test",
+		"test": "npm run lint && npm run check-deps && ava"
+	},
+	"dependencies": {
+		"lodash": "^4.17.21"
+	},
+	"devDependencies": {
+		"ava": "^4.2.0",
+		"depcheck": "^1.4.3",
+		"eslint": "^8.16.0",
+		"eslint-config-standard": "^17.0.0",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-n": "^15.2.0",
+		"eslint-plugin-promise": "^6.0.0"
+	},
+	"engines": {
+		"node": ">=14"
+	}
 }

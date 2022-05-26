@@ -1,19 +1,18 @@
-'use strict'
+import roundTo from 'lodash/round.js'
+import shuffle from 'lodash/shuffle.js'
 
-const shuffle = require('shuffle-array')
-const roundTo = require('round-to')
-const round = (n) => roundTo(n, 12)
+const round = n => roundTo(n, 12)
 
 const sum = (votes) => {
 	let res = 0
-	for (let key in votes) res += votes[key]
+	for (const key in votes) res += votes[key]
 	return res
 }
 
 const calculateShares = (votes, seats) => {
 	const allVotes = sum(votes)
 	const shares = {}
-	for (let party in votes) {
+	for (const party in votes) {
 		shares[party] = round((votes[party] * seats) / allVotes)
 	}
 	return shares
@@ -21,7 +20,7 @@ const calculateShares = (votes, seats) => {
 
 const collectRemainders = (shares) => {
 	const remainders = []
-	for (let party in shares) {
+	for (const party in shares) {
 		remainders.push(round(shares[party] - Math.floor(shares[party])))
 	}
 	remainders.sort()
@@ -31,7 +30,7 @@ const collectRemainders = (shares) => {
 
 const partiesByRemainder = (remainder, shares) => {
 	const parties = []
-	for (let party in shares) {
+	for (const party in shares) {
 		if (round(shares[party] - Math.floor(shares[party])) === remainder) parties.push(party)
 	}
 	return parties
@@ -40,7 +39,7 @@ const partiesByRemainder = (remainder, shares) => {
 const roundShares = (shares, seats) => {
 	// calculate minimum seats per party
 	const parliament = {}
-	for (let party in shares) {
+	for (const party in shares) {
 		parliament[party] = Math.floor(shares[party])
 	}
 
@@ -51,15 +50,15 @@ const roundShares = (shares, seats) => {
 
 		let parties
 		const doneRemainders = []
-		for (let remainder of remainders) {
+		for (const remainder of remainders) {
 			parties = partiesByRemainder(remainder, shares)
 			if (remainder > remainders[remainingSeats] && doneRemainders.indexOf(remainder) < 0) {
-				for (let party of parties) {
+				for (const party of parties) {
 					parliament[party] += 1
 				}
 			}
 			if (remainder === remainders[remainingSeats - 1] && remainder === remainders[remainingSeats] && doneRemainders.indexOf(remainder) < 0) {
-				for (let party of parties) {
+				for (const party of parties) {
 					parliament[party] = shares[party]
 				}
 			}
@@ -69,12 +68,12 @@ const roundShares = (shares, seats) => {
 	return parliament
 }
 
-const distribute = (votes, seats, draw = true) => {
+export default (votes, seats, draw = true) => {
 	const shares = calculateShares(votes, seats)
 	const parliament = roundShares(shares, seats)
 	if (draw) {
 		const parties = []
-		for (let party in parliament) {
+		for (const party in parliament) {
 			if (parliament[party] - Math.floor(parliament[party]) !== 0) parties.push(party)
 			parliament[party] = Math.floor(parliament[party])
 		}
@@ -85,5 +84,3 @@ const distribute = (votes, seats, draw = true) => {
 	}
 	return parliament
 }
-
-module.exports = distribute
