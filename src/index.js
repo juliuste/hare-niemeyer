@@ -78,8 +78,8 @@ export default (votes, seats, draw = true) => {
 			parliament[party] = Math.floor(parliament[party])
 		}
 		shuffle(parties)
-		for (let i = 0; i < (seats - sum(parliament)); i++) {
-			parliament[parties[i]] += 1
+		while (seats - sum(parliament)) {
+			parliament[parties.shift()] += 1
 		}
 	}
 	return parliament
