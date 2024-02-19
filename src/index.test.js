@@ -87,8 +87,14 @@ test('draw', async t => {
 		},
 	]
 	t.deepEqual(hn(drawVotes, drawSeats, false), noDraw)
-	const draw = hn(drawVotes, drawSeats)
-	t.true(draws.some(d => isEqual(d, draw)))
+	const firstDraw = hn(drawVotes, drawSeats)
+	t.true(draws.some(d => isEqual(d, firstDraw)))
+	let otherDraw
+	let tooDamnManyShuffles = 1e3
+	do {
+		if (!tooDamnManyShuffles--) throw new Error('Oi! The shuffler ain’t shufflin’!')
+		otherDraw = hn(drawVotes, drawSeats)
+	} while (isEqual(otherDraw, firstDraw))
 })
 
 test('berlin 2016 election example', async t => {
