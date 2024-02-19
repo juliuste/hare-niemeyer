@@ -72,12 +72,12 @@ export default (votes, seats, draw = true) => {
 	const shares = calculateShares(votes, seats)
 	const parliament = roundShares(shares, seats)
 	if (draw) {
-		const parties = []
+		let parties = []
 		for (const party in parliament) {
 			if (parliament[party] - Math.floor(parliament[party]) !== 0) parties.push(party)
 			parliament[party] = Math.floor(parliament[party])
 		}
-		shuffle(parties)
+		parties = shuffle(parties)
 		for (let i = 0; i < (seats - sum(parliament)); i++) {
 			parliament[parties[i]] += 1
 		}
