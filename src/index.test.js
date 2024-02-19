@@ -91,6 +91,19 @@ test('draw', async t => {
 	t.true(draws.some(d => isEqual(d, draw)))
 })
 
+test('draw with two seats', async t => {
+	const drawVotes = {
+		a: 5,
+		b: 15,
+		c: 30,
+		d: 5,
+		e: 45,
+	}
+	const drawSeats = 50
+	const draw = hn(drawVotes, drawSeats)
+	t.true(Object.values(draw).reduce((a, b) => a + b) === drawSeats)
+})
+
 test('berlin 2016 election example', async t => {
 	const berlinVotes = {
 		spd: 216,
